@@ -1,2 +1,12 @@
-<h1>Messages#new</h1>
-<p>Find me in app/views/messages/new.html.erb</p>
+<h1>Add message</h1>
+<%= form_with(model: @message, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "Title" %>
+  </div>
+  <div class="area">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -2,8 +2,9 @@
 <h2>Welcome <%= current_user.first_name %></h2>
 <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "waves-effect waves-teal btn-flat" %>
 <hr />
+<div>
 <h4><%= image_tag('remind-me.png') %>your reminders . . .</h4>
-
+</div>
   <% @messages.each do |message| %>
   <div class="row">
     <div class="col s12 m6">
@@ -21,7 +22,7 @@
   </div>
     
   <% end %>
-
-<%=  link_to "create reminder", new_message_path, class: "waves-effect waves-light btn red lighten-2" %>
-
+<div class="row">
+<%=  link_to "create reminder", new_message_path, class: "waves-effect waves-light btn red lighten-2 col s2 push-s2" %>
+</div>
 
